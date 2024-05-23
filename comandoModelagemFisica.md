@@ -10,3 +10,10 @@ Modelagem física tem a tarefa de IMPALNTAR o banco de dados no servidor/back-en
 CREATE DATABASE microblog_will CHARACTER SET utf8mb4;
 
 ```
+
+### Criar tabela de usuários
+
+```sql
+CREATE TABLE usuarios();
+
+```

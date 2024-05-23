@@ -24,3 +24,21 @@ VALUES('Nikollas', 'nikko22@gmail.com', '123senac', 'editor');
 INSERT INTO usuarios(nome, email, senha, tipo)
 VALUES('Flávia', 'flavia22@gmail.com', '123senac', 'editor');
 ```
+
+### SELECT na tabela de usuarios
+
+```sql
+SELECT nome, email FROM usuarios;
+```
+
+```sql
+SELECT nome, email FROM usuarios WHERE tipo = 'admin';
+```
+
+```sql
+SELECT nome, email FROM usuarios WHERE tipo = 'editor';
+```
+
+```sql
+SELECT * FROM usuarios WHERE id > 1;
+```

@@ -14,6 +14,12 @@ CREATE DATABASE microblog_will CHARACTER SET utf8mb4;
 ### Criar tabela de usuários
 
 ```sql
-CREATE TABLE usuarios();
+CREATE TABLE usuarios(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT;
+    nome VARCHAR(65) NOT NULL;
+    email VARCHAR(65) NOT NULL UNIQUE;
+    senha VARCHAR(255) NOT NULL;
+    tipo ENUM('admin', 'editor') NOT NULL;
+);
 
 ```

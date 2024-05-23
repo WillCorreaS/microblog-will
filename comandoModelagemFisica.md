@@ -15,11 +15,26 @@ CREATE DATABASE microblog_will CHARACTER SET utf8mb4;
 
 ```sql
 CREATE TABLE usuarios(
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT;
-    nome VARCHAR(65) NOT NULL;
-    email VARCHAR(65) NOT NULL UNIQUE;
-    senha VARCHAR(255) NOT NULL;
-    tipo ENUM('admin', 'editor') NOT NULL;
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(65) NOT NULL,
+    email VARCHAR(65) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    tipo ENUM('admin', 'editor') NOT NULL
+);
+
+```
+
+### Criar tabela de noticias
+
+```sql
+CREATE TABLE noticias(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    data DATETIME NOT NULL DEFAULT CURREnT_TIMESTAMP,
+    titulo VARCHAR(150) NOT NULL,
+    texto TEXT NOT NULL,
+    resumo TINYTEXT NOT NULL,
+    imagem VARCHAR(65) NOT NULL,
+    usuario_id INT NOT NULL 
 );
 
 ```

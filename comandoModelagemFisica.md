@@ -36,5 +36,15 @@ CREATE TABLE noticias(
     imagem VARCHAR(65) NOT NULL,
     usuario_id INT NOT NULL 
 );
+```
+
+### CRIAR RELACIONAMENTO ENTRE TABELAS
+Utilizamos uma `constraint` (restrição) para criar a relação entre as tabelas das chaves **primaria** e **estrangeira**.
+
+```sql
+--ALTER TABLE serve para alterar a estrutura de uma tabela
+ALTER TABLE noticias
+    ADD CONSTRAINT fk_noticias_usuarios
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id);
 
 ```

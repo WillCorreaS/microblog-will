@@ -1,5 +1,9 @@
 <?php 
 require_once "../inc/cabecalho-admin.php";
+//Importando as funções de manipulação dos usuários
+require_once "../inc/funcoes-usuarios.php";
+
+
 ?>
 
 

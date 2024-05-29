@@ -3,6 +3,10 @@ require_once "../inc/cabecalho-admin.php";
 //Importando as funções de manipulação dos usuários
 require_once "../inc/funcoes-usuarios.php";
 
+//Codigo para detectar se o botão 'INSERIR' for ativado
+if(isset($_POST['inserir'])){
+	echo "OK";
+}
 
 ?>
 

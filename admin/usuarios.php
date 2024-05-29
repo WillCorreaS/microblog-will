@@ -1,6 +1,11 @@
 <?php 
 require_once "../inc/cabecalho-admin.php";
+require_once "../inc/funcoes-usuarios.php";
+
+//Chamando função para exibir usuarios
+$listaDeUsuarios = exibirUsuarios($conexao);
 ?>
+<pre><?=var_dump($listaDeUsuarios)?></pre>
 
 
 <div class="row">

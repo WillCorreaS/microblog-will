@@ -17,5 +17,19 @@ function inserirUsuario($conexao, $nome, $email, $tipo, $senha){
 
 
 
+//Criando função para exibir usuários do banco de dados
+function exibirUsuarios($conexao){
+    $sql = "SELECT nome, email, tipo, id FROM usuarios";
+    //O comando 'mysqli_query()' usando SELECT - retorna a consulta e é necessário armazenar este conteúdo em outra variável
+    $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+
+    //Retornamos o resultado TRANSFORMADO em array associativo
+    return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+}
+
+
+
+
+
 
 ?>
